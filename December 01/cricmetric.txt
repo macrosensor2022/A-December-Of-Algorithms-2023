@@ -1,0 +1,24 @@
+#include<iostream>
+#include<algorithm>//header file for stl function max_element
+using namespace std;
+
+int main()
+{
+    cout<<"Enter the number of batsman";
+    int n;
+    cin>>n;
+    int runs[n];
+    cout<<"Enter the runs scored by the batsman";
+     int result=0;
+    for(int i=0;i<n;i++)
+    {
+        cin>>runs[i];
+           result+=runs[i];
+    }
+  
+   
+    cout<<result<<"\n";
+     cout<<max_element(runs,runs+n)-runs;//function returns max element index in array
+   
+
+}//total time complexity is O(n)
